@@ -11,7 +11,7 @@ System.config({
   //map tells the System loader where to look for things
   map: {
     
-    'app': '/angular/src',
+    'app': '/angular2/src',
     
     '@angular/core': 'npm:@angular/core@5.0.0/bundles/core.umd.js',
     '@angular/common': 'npm:@angular/common@5.0.0/bundles/common.umd.js',

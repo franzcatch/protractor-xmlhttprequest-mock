@@ -1,5 +1,5 @@
 //our root app component
-import {Component, NgModule} from '@angular/core'
+import {Component, NgModule, NgZone} from '@angular/core'
 import {BrowserModule} from '@angular/platform-browser'
 import {HttpModule} from '@angular/http'
 import {Http} from '@angular/http'
@@ -8,7 +8,7 @@ import {Http} from '@angular/http'
     selector: 'my-app',
     template: `
     <div>
-      <h2>Angular {{appType}} app</h2>
+      <h2>The {{appType}} app</h2>
       <div><button (click)="getData()" class="refresh-data">Refresh data</button></div>
       <table>
         <tr>
@@ -45,10 +45,27 @@ export class App {
     constructor(
         private http: Http
     ) {
-        this.getData();
+        if (window.location.href.includes("waitForProtractor")) {
+            this.waitForProtractor();
+        } else {
+            this.getData();
+        }
+    }
+
+    waitForProtractor() {
+        const self = this;
+
+        setTimeout(function() {
+            if (window.protractorInitComplete) {
+                self.getData();
+            } else {
+                self.waitForProtractor();
+            }
+        }, 1000);
     }
 
     getData() {
+        console.log("getting")
         this.requestStatus = 'in progress';
         this.http.request(this.requestUrl, {method: 'get'}).subscribe((data) => {
             this.requestStatus = 'done';

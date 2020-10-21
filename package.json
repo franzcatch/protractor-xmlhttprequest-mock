@@ -1,28 +1,30 @@
 {
-  "name": "protractor-xmlhttprequest-mock",
-  "version": "1.4.0",
-  "description": "Ajax requests mock plugin for protractor (works with Angular >= 2 also)",
+  "name": "protractor-xmlhttprequest-mocker",
+  "version": "1.4.1",
+  "description": "Ajax requests mock plugin for protractor (works with Angular/Vue/etc in Chrome/IE11/etc)",
   "main": "lib/index.js",
   "scripts": {
     "serve-sample-apps": "./node_modules/.bin/http-server ./tests/www --silent",
     "protractor-tests": "./node_modules/.bin/protractor ./tests/conf.js",
     "webdriver-update": "webdriver-manager update",
-    "test": "npm run webdriver-update; node tests/run.js"
+    "test": "node tests/run.js"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/krisboit/protractor-xmlhttprequest-mock.git"
+    "url": "git+https://github.com/krisboit/protractor-xmlhttprequest-mocker.git"
   },
-  "author": "Tibi Krisboi",
+  "author": "Adam Franzen - (Forked from original by Tibi Krisboi)",
   "bugs": {
-    "url": "https://github.com/krisboit/protractor-xmlhttprequest-mock/issues"
+    "url": "https://github.com/franzena/protractor-xmlhttprequest-mocker/issues"
   },
-  "homepage": "https://github.com/krisboit/protractor-xmlhttprequest-mock#readme",
+  "homepage": "https://github.com/franzena/protractor-xmlhttprequest-mocker#readme",
   "devDependencies": {
+    "@babel/core": "^7.4.3",
+    "@babel/plugin-transform-classes": "^7.10.4",
     "http-server": "^0.9.0",
     "jasmine": "^3.0.0",
     "jasmine-spec-reporter": "^4.2.1",
-    "protractor": "^5.3.0",
+    "protractor": "^7.0.0",
     "shelljs": "^0.7.7"
   }
 }

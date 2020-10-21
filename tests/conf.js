@@ -1,8 +1,7 @@
 exports.config = {
     directConnect: true,
     specs: [
-        //'**/*.spec.js'
-        'angular.spec.js'
+        '**/*.spec.js'
     ],
 
     capabilities: {
@@ -31,10 +30,6 @@ exports.config = {
             displaySpecDuration: true
         }));
     },
-
-    plugins: [{
-       path: '../lib/index.js'
-    }],
 
     framework: 'jasmine2',
     jasmineNodeOpts: {
