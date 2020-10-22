@@ -1,6 +1,6 @@
 {
   "name": "protractor-xmlhttprequest-mocker",
-  "version": "1.4.1",
+  "version": "2.0.0",
   "description": "Ajax requests mock plugin for protractor (works with Angular/Vue/etc in Chrome/IE11/etc)",
   "main": "lib/index.js",
   "scripts": {
