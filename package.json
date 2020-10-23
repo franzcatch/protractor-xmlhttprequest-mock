@@ -18,9 +18,11 @@
     "url": "https://github.com/franzena/protractor-xmlhttprequest-mocker/issues"
   },
   "homepage": "https://github.com/franzena/protractor-xmlhttprequest-mocker#readme",
-  "devDependencies": {
+  "dependencies": {
     "@babel/core": "^7.4.3",
-    "@babel/plugin-transform-classes": "^7.10.4",
+    "@babel/plugin-transform-classes": "^7.10.4"
+  },
+  "devDependencies": {
     "http-server": "^0.9.0",
     "jasmine": "^3.0.0",
     "jasmine-spec-reporter": "^4.2.1",
